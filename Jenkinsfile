@@ -1,6 +1,6 @@
 pipeline{
 
-  agent {  docker{ image 'maven:3.6.3' } }
+  agent any
 
   stages{
     stage('Start'){
@@ -13,9 +13,9 @@ pipeline{
         echo "Progress"
           }
             }
-    stage('mvn -v check'){
+    stage('end){
       steps{
-        sh 'mvn --version'
+        echo "end"
         }
           }
             }
